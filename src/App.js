@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import React from 'react';
+
 import './App.css';
 
+import Dropzone from "./dropzone/Dropzone";
+import GalleryHeader from './header/GalleryHeader';
+import GalleryItem from './photoItem/GalleryItem';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     <GalleryHeader/>
+      <div className="content">
+        <Dropzone/>
+      </div>
+      <GalleryItem/>
     </div>
   );
 }
